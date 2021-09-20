@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCoeur">
         <activity
+            android:name=".MonCoeur"
+            android:exported="true" />
+        <activity
             android:name=".JeSuis"
             android:exported="true" />
         <activity
