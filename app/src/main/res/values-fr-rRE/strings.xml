@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppCoeur</string>
+    <string name="start_test">Commencer le test</string>
+    <string name="your_name">Votre nom</string>
+</resources>
