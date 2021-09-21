@@ -23,5 +23,6 @@
     <string name="togglebutton">ToggleButton</string>
     <string name="i_never_have">Non</string>
     <string name="i_have">Oui</string>
-    <string name="have_you_ever_consulted_a_cardiologist">"Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ? "</string>
+    <string name="have_you_ever_consulted_a_cardiologist">"Avez-vous déjà consulté un cardiologue ? "</string>
+    <string name="have_you_already_checked_with_your_doctor_about_your_heart_risk">"Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ? "</string>
 </resources>
