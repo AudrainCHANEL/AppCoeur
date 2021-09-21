@@ -11,11 +11,11 @@
         android:layout_width="280dp"
         android:layout_height="294dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/coeur"
-        android:contentDescription="@string/logo" />
+        app:srcCompat="@drawable/coeur" />
 
     <TextView
         android:id="@+id/textView"
@@ -30,8 +30,8 @@
 
     <EditText
         android:id="@+id/PersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="179dp"
+        android:layout_height="39dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:importantForAutofill="no"

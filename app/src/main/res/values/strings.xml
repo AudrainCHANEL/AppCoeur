@@ -3,4 +3,19 @@
     <string name="start_test">Start Test !</string>
     <string name="your_name">Your Name</string>
     <string name="logo">logo</string>
+    <string name="do_you_have_cholesterol">Do you have cholesterol ?</string>
+    <string name="do_you_have_a_heart_condition">Do you have a heart condition ?</string>
+    <string name="imc">IMC ?</string>
+    <string name="avc">AVC ?</string>
+    <string name="image3">imagecoeur</string>
+    <string name="do_you_have_hypertension">Do you have hypertension ?</string>
+    <string name="are_you_diabetic">Are you diabetic ?</string>
+    <string name="description">description</string>
+    <string name="your_age">Your Age</string>
+    <string name="you_are">You are</string>
+    <string name="a_woman">A Woman</string>
+    <string name="a_man">A man</string>
+    <string name="other_answer">Other answer</string>
+    <string name="previous_step">Previous Step</string>
+    <string name="next_step">Next Step</string>
 </resources>
