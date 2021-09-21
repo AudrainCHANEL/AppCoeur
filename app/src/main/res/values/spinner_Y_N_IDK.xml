@@ -3,6 +3,6 @@
     <string-array name="Yes_NO_IDK">
         <item>No</item>
         <item>Yes</item>
-        <item>I don't know</item>
+        <item>I don t know</item>
     </string-array>
 </resources>

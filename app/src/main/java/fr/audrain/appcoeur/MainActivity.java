@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText name;
+    private Person user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         name = findViewById(R.id.PersonName);
+
+        user = new Person();
     }
     
     public void launchTest(View v) {
@@ -25,8 +28,11 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Name field is empty.",Toast.LENGTH_SHORT).show();
         }
         else {
+            user.setName(name.getText().toString());
+
             Intent intent = new Intent(this, JeSuis.class);
-            // transfert de données + Création Objet Person
+            intent.putExtra("acti1to2", user);
+            Log.d("MainActivity : ", user.toString());
             startActivity(intent);
         }
     }

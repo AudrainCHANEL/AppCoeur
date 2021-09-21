@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -16,10 +17,15 @@ public class JeSuis extends AppCompatActivity {
     private RadioButton man, woman, other;
     private TextView displayAge;
 
+    private Person user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_je_suis);
+
+        user = getIntent().getExtras().getParcelable("acti1to2");
+        Log.d("Second Activity : ", user.toString());
 
         age = findViewById(R.id.seekBar2);
         man = findViewById(R.id.radioButton2);
@@ -53,23 +59,24 @@ public class JeSuis extends AppCompatActivity {
             Toast.makeText(this, "Age is incoherent.",Toast.LENGTH_SHORT).show();
         }
         else {
+            user.setAge(age.getProgress());
+
             //On passe au sexe
             if (!man.isChecked() && !woman.isChecked() && !other.isChecked()) {
                 Toast.makeText(this, "Select an answer for the sex field.",Toast.LENGTH_SHORT).show();
             }
             else {
-                //TODO sexe
                 if (man.isChecked()) {
-                    //Un homme
+                    user.setSexe(Sexe.HOMME);
                 }
                 else if (woman.isChecked()) {
-                    //Une femme
+                    user.setSexe(Sexe.FEMME);
                 }
                 else {
-                    //Autre
+                    user.setSexe(Sexe.AUTRE);
                 }
                 Intent intent = new Intent(this, MonCoeur.class);
-                //TODO transfert de données
+                intent.putExtra("acti2to3", user);
                 startActivity(intent);
             }
         }
