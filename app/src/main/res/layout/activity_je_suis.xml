@@ -6,57 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".JeSuis">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="280dp"
+        android:layout_height="294dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coeur" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/description"
-            app:srcCompat="@drawable/coeur" />
+    <TableLayout
+        android:layout_width="394dp"
+        android:layout_height="195dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="128dp"
-                android:layout_height="29dp"
-                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_weight="0"
                 android:text="@string/your_age" />
 
             <SeekBar
                 android:id="@+id/seekBar2"
-                android:layout_width="wrap_content"
-                android:layout_height="41dp"
+                android:layout_width="130dp"
+                android:layout_height="28dp"
                 android:layout_weight="1"
                 android:max="120"
                 android:progress="1"
                 android:progressTint="#673AB7" />
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_weight="0"
                 android:text="@string/you_are" />
 
             <RadioGroup
@@ -82,31 +81,33 @@
                     android:layout_height="wrap_content"
                     android:text="@string/other_answer" />
             </RadioGroup>
+        </TableRow>
 
-        </LinearLayout>
+    </TableLayout>
 
-        <LinearLayout
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:text="@string/previous_step" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="go_back"
-                android:text="@string/previous_step" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="go_next"
-                android:text="@string/next_step" />
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/next_step" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

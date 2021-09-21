@@ -11,8 +11,8 @@
     <string name="do_you_have_hypertension">Do you have hypertension ?</string>
     <string name="are_you_diabetic">Are you diabetic ?</string>
     <string name="description">description</string>
-    <string name="your_age">Your Age</string>
-    <string name="you_are">You are</string>
+    <string name="your_age">Your Age :</string>
+    <string name="you_are">You are :</string>
     <string name="a_woman">A Woman</string>
     <string name="a_man">A man</string>
     <string name="other_answer">Other answer</string>
