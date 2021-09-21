@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:contentDescription="@string/description"
             app:srcCompat="@drawable/coeur" />
 
         <LinearLayout
@@ -30,18 +31,19 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="128dp"
+                android:layout_height="29dp"
                 android:layout_weight="1"
-                android:text="Your Age" />
+                android:text="@string/your_age" />
 
-            <EditText
-                android:id="@+id/editTextNumberSigned"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <SeekBar
+                android:id="@+id/seekBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="numberSigned" />
+                android:max="120"
+                android:progress="1"
+                android:progressTint="#673AB7" />
 
         </LinearLayout>
 
@@ -55,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="You are" />
+                android:text="@string/you_are" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -66,19 +68,19 @@
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A man" />
+                    android:text="@string/a_man" />
 
                 <RadioButton
                     android:id="@+id/radioButton4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A Woman" />
+                    android:text="@string/a_woman" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Other answer" />
+                    android:text="@string/other_answer" />
             </RadioGroup>
 
         </LinearLayout>
@@ -93,14 +95,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Previous Step" />
+                android:text="@string/previous_step" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Next Step" />
+                android:text="@string/next_step" />
         </LinearLayout>
 
     </LinearLayout>

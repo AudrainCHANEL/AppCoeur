@@ -6,28 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MonCoeur">
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/image3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/coeur" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TableLayout
-        android:layout_width="408dp"
-        android:layout_height="290dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
-
-        <TableRow
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="31dp">
+            android:layout_height="150dp"
+            android:contentDescription="@string/image3"
+            app:srcCompat="@drawable/coeur" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Switch
                 android:id="@+id/switch1"
@@ -42,11 +36,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/do_you_have_a_heart_condition" />
-        </TableRow>
 
-        <TableRow
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Switch
                 android:id="@+id/switch2"
@@ -60,11 +56,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/are_you_diabetic" />
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Switch
                 android:id="@+id/switch3"
@@ -78,12 +75,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/do_you_have_cholesterol" />
+        </LinearLayout>
 
-        </TableRow>
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Switch
                 android:id="@+id/switch5"
@@ -98,29 +95,12 @@
                 android:layout_weight="1"
                 android:text="@string/do_you_have_hypertension" />
 
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Switch
-                android:id="@+id/switch4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/imc" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView9"
@@ -135,8 +115,28 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-        </TableRow>
+        </LinearLayout>
 
-    </TableLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/imc" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
