@@ -21,7 +21,7 @@
     <string name="next_step">Étape suivante</string>
     <string name="have_you_ever_had_a_cardiac_check_up">Avez-vous déjà effectué un bilan cardiaque ?</string>
     <string name="togglebutton">ToggleButton</string>
-    <string name="i_never_have">Je ne l\'ai pas fait</string>
-    <string name="i_have">Je l\'ai fait</string>
+    <string name="i_never_have">Non</string>
+    <string name="i_have">Oui</string>
     <string name="have_you_ever_consulted_a_cardiologist">"Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ? "</string>
 </resources>
