@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name.findViewById(R.id.PersonName);
+        name = findViewById(R.id.PersonName);
     }
     
     public void launchTest(View v) {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             Intent intent = new Intent(this, JeSuis.class);
-            //TODO transfert de données + Création Objet Person
+            // transfert de données + Création Objet Person
             startActivity(intent);
         }
     }

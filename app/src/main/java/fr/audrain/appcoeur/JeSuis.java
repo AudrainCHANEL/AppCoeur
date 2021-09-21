@@ -7,21 +7,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class JeSuis extends AppCompatActivity {
-    private EditText age;
+    private SeekBar age;
     private RadioButton man, woman, other;
+    private TextView displayAge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_je_suis);
 
-        age = findViewById(R.id.editTextNumberSigned);
+        age = findViewById(R.id.seekBar2);
         man = findViewById(R.id.radioButton2);
         woman = findViewById(R.id.radioButton4);
         other = findViewById(R.id.radioButton3);
+        displayAge = findViewById(R.id.textView3);
+
+        age.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                displayAge.setText("Your Age : "+String.valueOf(i));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
     }
 
     public void go_back(View v) {
@@ -31,11 +49,7 @@ public class JeSuis extends AppCompatActivity {
     //Toast.makeText(this, "Name field is empty.",Toast.LENGTH_SHORT).show();
     public void go_next(View v) {
         //Age vide
-        if (age.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Age field is empty.",Toast.LENGTH_SHORT).show();
-        }
-        //Age saisi, mais pas dans ]0;120[
-        else if (0 < Integer.parseInt(age.getText().toString()) || Integer.parseInt(age.getText().toString()) > 120) {
+        if (age.getProgress() == 0) {
             Toast.makeText(this, "Age is incoherent.",Toast.LENGTH_SHORT).show();
         }
         else {
