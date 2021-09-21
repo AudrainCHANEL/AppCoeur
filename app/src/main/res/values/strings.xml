@@ -18,4 +18,9 @@
     <string name="other_answer">Other answer</string>
     <string name="previous_step">Previous Step</string>
     <string name="next_step">Next Step</string>
+    <string name="have_you_ever_had_a_cardiac_check_up">Have you ever had a cardiac check-up ?</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="i_never_have">I never have</string>
+    <string name="i_have">I have</string>
+    <string name="have_you_ever_consulted_a_cardiologist">Have you ever consulted a cardiologist ?</string>
 </resources>
