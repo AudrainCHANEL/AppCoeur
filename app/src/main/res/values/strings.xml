@@ -28,4 +28,9 @@
     <string name="do_you_eat_fruits_and_vegetables_every_day">Do you eat fruits and vegetables every day ?</string>
     <string name="do_you_add_more_salt_to_your_plates">Do you add more salt to your plates ?</string>
     <string name="at_home_you_mostly_eat">At home, you mostly eat :</string>
+    <string name="my_assessment">My assessment</string>
+    <string name="my_heart">My heart</string>
+    <string name="my_cardiac_monitoring">My cardiac monitoring</string>
+    <string name="my_nutrition">My nutrition</string>
+    <string name="age">age</string>
 </resources>
