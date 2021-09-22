@@ -24,8 +24,18 @@ public class JeSuis extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_je_suis);
 
-        user = getIntent().getExtras().getParcelable("acti1to2");
-        Log.d("Second Activity : ", user.toString());
+        if (getIntent() != null) {
+            Person user = getIntent().getParcelableExtra("profil");
+            if (user != null) {
+                this.user = user;
+            }
+            else {
+                Log.d("JE SUIS ACTIVITY :", "user is null");
+            }
+        }
+        else {
+            Log.d("JE SUIS ACTIVITY :", "bundle is null");
+        }
 
         age = findViewById(R.id.seekBar2);
         man = findViewById(R.id.radioButton2);
@@ -46,21 +56,23 @@ public class JeSuis extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
+        setValues();
     }
 
     public void go_back(View v) {
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("profil", user);
+        startActivity(intent);
     }
 
     //Toast.makeText(this, "Name field is empty.",Toast.LENGTH_SHORT).show();
     public void go_next(View v) {
         //Age vide
         if (age.getProgress() == 0) {
-            Toast.makeText(this, "Age is incoherent.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Age is not coherent.",Toast.LENGTH_SHORT).show();
         }
         else {
             user.setAge(age.getProgress());
-
             //On passe au sexe
             if (!man.isChecked() && !woman.isChecked() && !other.isChecked()) {
                 Toast.makeText(this, "Select an answer for the sex field.",Toast.LENGTH_SHORT).show();
@@ -75,12 +87,27 @@ public class JeSuis extends AppCompatActivity {
                 else {
                     user.setSexe(Sexe.AUTRE);
                 }
+
                 Intent intent = new Intent(this, MonCoeur.class);
-                intent.putExtra("acti2to3", user);
+                intent.putExtra("profil", user);
                 startActivity(intent);
             }
         }
     }
 
+    public void setValues() {
+        age.setProgress(user.getAge());
 
+        if (user.getSexe() != Sexe.UNDEFINED) {
+            if (user.getSexe() == Sexe.HOMME) {
+                man.setChecked(true);
+            }
+            else if (user.getSexe() == Sexe.FEMME) {
+                woman.setChecked(true);
+            }
+            else {
+                other.setChecked(true);
+            }
+        }
+    }
 }

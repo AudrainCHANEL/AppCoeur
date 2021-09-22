@@ -3,6 +3,8 @@ package fr.audrain.appcoeur;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Person implements Parcelable {
     //Main
     private String name;
@@ -12,18 +14,30 @@ public class Person implements Parcelable {
     private int age;
 
     //My Heart
-    private boolean heart_condition, diabetic, family, cholesterol;
-
-    //heart/avc,
+    private boolean heart_condition, diabetic, hypertension, cholesterol, imc;
+    private YesNoMaybe avc;
 
     //Doctor
-    private String cardioRisk;
+    private YesNoMaybe cardioRisk;
     private boolean checkup, seeCardio;
 
-    public Person(String name) {
-        this.name = name;
+    public Person() {
+        this.setName("");
+
+        this.setSexe(Sexe.UNDEFINED);
+        this.setAge(0);
+
+        this.setHeart_condition(false);
+        this.setDiabetic(false);
+        this.setHypertension(false);
+        this.setCholesterol(false);
+        this.setImc(false);
+        this.setAvc(YesNoMaybe.DONTKNOW);
+
+        this.setCardioRisk(YesNoMaybe.DONTKNOW);
+        this.setCheckup(false);
+        this.setSeeCardio(false);
     }
-    public Person() {}
 
     private Person(Parcel in) {
         // Both reading and writing orderings must match (see writeToParcel method)
@@ -34,10 +48,12 @@ public class Person implements Parcelable {
 
         this.setHeart_condition(in.readBoolean());
         this.setDiabetic(in.readBoolean());
-        this.setFamily(in.readBoolean());
+        this.setHypertension(in.readBoolean());
         this.setCholesterol(in.readBoolean());
+        this.setImc(in.readBoolean());
+        this.setAvc(YesNoMaybe.values()[in.readInt()]);
 
-        this.setCardioRisk(in.readString());
+        this.setCardioRisk(YesNoMaybe.values()[in.readInt()]);
         this.setCheckup(in.readBoolean());
         this.setSeeCardio(in.readBoolean());
     }
@@ -50,13 +66,13 @@ public class Person implements Parcelable {
         this.name = name;
     }
 
-    public Sexe isSexe() {
+    public Sexe getSexe() {
         return sexe;
     }
 
-    public void setSexe(Sexe sexe) {this.sexe = sexe;}
-
-    public void setSexe (String sexe) {this.sexe = Sexe.valueOf(sexe);}
+    public void setSexe(Sexe sexe) {
+        this.sexe = sexe;
+    }
 
     public int getAge() {
         return age;
@@ -82,12 +98,12 @@ public class Person implements Parcelable {
         this.diabetic = diabetic;
     }
 
-    public boolean isFamily() {
-        return family;
+    public boolean isHypertension() {
+        return hypertension;
     }
 
-    public void setFamily(boolean family) {
-        this.family = family;
+    public void setHypertension(boolean hypertension) {
+        this.hypertension = hypertension;
     }
 
     public boolean isCholesterol() {
@@ -98,11 +114,27 @@ public class Person implements Parcelable {
         this.cholesterol = cholesterol;
     }
 
-    public String getCardioRisk() {
+    public boolean isImc() {
+        return imc;
+    }
+
+    public void setImc(boolean imc) {
+        this.imc = imc;
+    }
+
+    public YesNoMaybe getAvc() {
+        return avc;
+    }
+
+    public void setAvc(YesNoMaybe avc) {
+        this.avc = avc;
+    }
+
+    public YesNoMaybe getCardioRisk() {
         return cardioRisk;
     }
 
-    public void setCardioRisk(String cardioRisk) {
+    public void setCardioRisk(YesNoMaybe cardioRisk) {
         this.cardioRisk = cardioRisk;
     }
 
@@ -139,10 +171,12 @@ public class Person implements Parcelable {
 
         parcel.writeBoolean(heart_condition);
         parcel.writeBoolean(diabetic);
-        parcel.writeBoolean(family);
+        parcel.writeBoolean(hypertension);
         parcel.writeBoolean(cholesterol);
+        parcel.writeBoolean(imc);
+        parcel.writeInt(avc.ordinal());
 
-        parcel.writeString(cardioRisk);
+        parcel.writeInt(cardioRisk.ordinal());
         parcel.writeBoolean(checkup);
         parcel.writeBoolean(seeCardio);
     }
@@ -159,21 +193,4 @@ public class Person implements Parcelable {
             return new Person[size];
         }
     };
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", sexe=" + sexe +
-                ", age=" + age +
-                ", heart_condition=" + heart_condition +
-                ", diabetic=" + diabetic +
-                ", family=" + family +
-                ", cholesterol=" + cholesterol +
-                ", cardioRisk='" + cardioRisk + '\'' +
-                ", checkup=" + checkup +
-                ", seeCardio=" + seeCardio +
-                '}';
-    }
-
 }

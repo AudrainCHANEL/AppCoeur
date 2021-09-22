@@ -18,9 +18,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = findViewById(R.id.PersonName);
+        if (getIntent() != null) {
+            Person user = getIntent().getParcelableExtra("profil");
+            if (user != null) {
+                this.user = user;
+            }
+            else {
+                this.user = new Person();
+            }
+        }
+        else {
+            this.user = new Person();
+        }
 
-        user = new Person();
+        name = findViewById(R.id.PersonName);
+        this.setValues();
     }
     
     public void launchTest(View v) {
@@ -31,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
             user.setName(name.getText().toString());
 
             Intent intent = new Intent(this, JeSuis.class);
-            intent.putExtra("acti1to2", user);
-            Log.d("MainActivity : ", user.toString());
+            intent.putExtra("profil", user);
             startActivity(intent);
         }
+    }
+
+    public void setValues() {
+        name.setText(this.user.getName());
     }
 }
