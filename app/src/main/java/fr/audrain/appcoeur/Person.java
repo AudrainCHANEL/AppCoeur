@@ -21,6 +21,10 @@ public class Person implements Parcelable {
     private YesNoMaybe cardioRisk;
     private boolean checkup, seeCardio;
 
+    //diet
+    private boolean breakfast, vegetable, salt;
+    private EatCustom eatCutsom;
+
     public Person() {
         this.setName("");
 
@@ -37,6 +41,11 @@ public class Person implements Parcelable {
         this.setCardioRisk(YesNoMaybe.DONTKNOW);
         this.setCheckup(false);
         this.setSeeCardio(false);
+
+        this.setBreakfast(true);
+        this.setVegetable(true);
+        this.setSalt(false);
+        this.setEatCutsom(EatCustom.COOKED);
     }
 
     private Person(Parcel in) {
@@ -56,6 +65,11 @@ public class Person implements Parcelable {
         this.setCardioRisk(YesNoMaybe.values()[in.readInt()]);
         this.setCheckup(in.readBoolean());
         this.setSeeCardio(in.readBoolean());
+
+        this.setBreakfast(in.readBoolean());
+        this.setVegetable(in.readBoolean());
+        this.setSalt(in.readBoolean());
+        this.setEatCutsom(EatCustom.values()[in.readInt()]);
     }
 
     public String getName() {
@@ -154,6 +168,38 @@ public class Person implements Parcelable {
         this.seeCardio = seeCardio;
     }
 
+    public boolean isBreakfast() {
+        return breakfast;
+    }
+
+    public void setBreakfast(boolean breakfast) {
+        this.breakfast = breakfast;
+    }
+
+    public boolean isVegetable() {
+        return vegetable;
+    }
+
+    public void setVegetable(boolean vegetable) {
+        this.vegetable = vegetable;
+    }
+
+    public boolean isSalt() {
+        return salt;
+    }
+
+    public void setSalt(boolean salt) {
+        this.salt = salt;
+    }
+
+    public EatCustom getEatCutsom() {
+        return eatCutsom;
+    }
+
+    public void setEatCutsom(EatCustom eatCutsom) {
+        this.eatCutsom = eatCutsom;
+    }
+
     /**
      * Pour implementer Parcelable
      */
@@ -179,6 +225,11 @@ public class Person implements Parcelable {
         parcel.writeInt(cardioRisk.ordinal());
         parcel.writeBoolean(checkup);
         parcel.writeBoolean(seeCardio);
+
+        parcel.writeBoolean(breakfast);
+        parcel.writeBoolean(vegetable);
+        parcel.writeBoolean(salt);
+        parcel.writeInt(eatCutsom.ordinal());
     }
 
     /**

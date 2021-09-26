@@ -46,7 +46,9 @@ public class MonCoeur extends AppCompatActivity {
 
         user.setAvc(YesNoMaybe.values()[avc.getSelectedItemPosition()]);
 
-        //Intent intent = new Intent(this, );
+        Intent intent = new Intent(this, MonSuiviCardiaque.class);
+        intent.putExtra("profil", user);
+        startActivity(intent);
 
     }
 

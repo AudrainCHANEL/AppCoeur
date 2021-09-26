@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eat_custom">
+        <item>Prepared meal</item>
+        <item>Cooked meal</item>
+        <item>Canned food</item>
+    </string-array>
+</resources>

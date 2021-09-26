@@ -43,7 +43,8 @@
                 android:id="@+id/spinner2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/Yes_NO_IDK" />
 
         </TableRow>
 
@@ -112,6 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="go_back"
             android:text="@string/previous_step" />
 
         <Button
@@ -119,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="go_next"
             android:text="@string/next_step" />
     </LinearLayout>
 
