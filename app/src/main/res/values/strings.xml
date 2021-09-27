@@ -5,8 +5,8 @@
     <string name="logo">logo</string>
     <string name="do_you_have_cholesterol">Do you have cholesterol ?</string>
     <string name="do_you_have_a_heart_condition">Do you have a heart condition ?</string>
-    <string name="imc">IMC ?</string>
-    <string name="avc">AVC ?</string>
+    <string name="imc">Do you know you BMI ?</string>
+    <string name="avc">Did a relative of you have heart issues before (s)he was 55 ?</string>
     <string name="image3">imagecoeur</string>
     <string name="do_you_have_hypertension">Do you have hypertension ?</string>
     <string name="are_you_diabetic">Are you diabetic ?</string>

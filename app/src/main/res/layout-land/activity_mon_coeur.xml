@@ -37,14 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:minHeight="48dp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:minHeight="48dp"
                 android:text="@string/do_you_have_a_heart_condition" />
+
         </TableRow>
 
         <TableRow
@@ -55,14 +50,9 @@
                 android:id="@+id/switch2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/are_you_diabetic" />
+
         </TableRow>
 
         <TableRow
@@ -73,12 +63,6 @@
                 android:id="@+id/switch3"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/do_you_have_cholesterol" />
 
@@ -92,12 +76,6 @@
                 android:id="@+id/switch5"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/do_you_have_hypertension" />
 
@@ -111,12 +89,6 @@
                 android:id="@+id/switch4"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/imc" />
 
@@ -127,18 +99,18 @@
             android:layout_height="wrap_content"
             android:gravity="center">
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/avc" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
