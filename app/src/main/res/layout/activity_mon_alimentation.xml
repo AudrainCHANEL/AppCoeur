@@ -81,7 +81,8 @@
                 android:id="@+id/spinner3"
                 android:layout_width="76dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/eat_custom" />
 
         </TableRow>
 
@@ -102,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="go_back"
             android:text="@string/previous_step" />
 
         <Button
@@ -109,6 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="go_next"
             android:text="@string/next_step" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
