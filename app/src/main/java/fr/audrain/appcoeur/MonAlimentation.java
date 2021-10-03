@@ -49,6 +49,9 @@ public class MonAlimentation extends AppCompatActivity {
         this.user.setSalt(salt.isChecked());
         this.user.setEatCutsom(EatCustom.values()[eatCustom.getSelectedItemPosition()]);
 
+        Intent intent = new Intent(this, Bilan.class);
+        intent.putExtra("profil", user);
+        startActivity(intent);
         /**
          * Intent intent = new Intent(this, );
          * intent.putExtra("profil", this.user);

@@ -34,4 +34,6 @@
     <string name="my_cardiac_monitoring">Mon suivi cardiaque</string>
     <string name="my_nutrition">Mon alimentation</string>
     <string name="age">âge</string>
+    <string name="yes">OUI</string>
+    <string name="no">NO</string>
 </resources>

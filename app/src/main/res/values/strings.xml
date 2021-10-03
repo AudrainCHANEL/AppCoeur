@@ -33,4 +33,6 @@
     <string name="my_cardiac_monitoring">My cardiac monitoring</string>
     <string name="my_nutrition">My nutrition</string>
     <string name="age">age</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 </resources>
