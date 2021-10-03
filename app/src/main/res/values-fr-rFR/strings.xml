@@ -28,7 +28,7 @@
     <string name="breakfast">Commencez-vous votre journée par un petit-déjeuner ?</string>
     <string name="do_you_eat_fruits_and_vegetables_every_day">Mangez-vous des fruits et légumes tous les jours ?</string>
     <string name="do_you_add_more_salt_to_your_plates">Resalez-vous vos plats ?</string>
-    <string name="at_home_you_mostly_eat">À votre domicile, vous mangez le plus souvent :À votre domicile, vous mangez le plus souvent :</string>
+    <string name="at_home_you_mostly_eat">À votre domicile, vous mangez le plus souvent :</string>
     <string name="my_assessment">Mon bilan</string>
     <string name="my_heart">Mon coeur</string>
     <string name="my_cardiac_monitoring">Mon suivi cardiaque</string>
@@ -37,4 +37,7 @@
     <string name="yes">OUI</string>
     <string name="no">NON</string>
     <string name="i_dont_know">Je ne sais pas</string>
+    <string name="prepared">des plats préparés</string>
+    <string name="cooked">des repas cuisinés par moi-même</string>
+    <string name="can">de la nouriture en conserve</string>
 </resources>

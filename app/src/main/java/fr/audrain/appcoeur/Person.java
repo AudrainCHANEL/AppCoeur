@@ -3,8 +3,6 @@ package fr.audrain.appcoeur;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import androidx.annotation.NonNull;
-
 public class Person implements Parcelable {
     //Main
     private String name;
@@ -23,7 +21,7 @@ public class Person implements Parcelable {
 
     //diet
     private boolean breakfast, vegetable, salt;
-    private EatCustom eatCutsom;
+    private EatCustom eatCustom;
 
     public Person() {
         this.setName("");
@@ -42,10 +40,10 @@ public class Person implements Parcelable {
         this.setCheckup(false);
         this.setSeeCardio(false);
 
-        this.setBreakfast(true);
-        this.setVegetable(true);
+        this.setBreakfast(false);
+        this.setVegetable(false);
         this.setSalt(false);
-        this.setEatCutsom(EatCustom.COOKED);
+        this.setEatCustom(EatCustom.COOKED);
     }
 
     private Person(Parcel in) {
@@ -69,7 +67,7 @@ public class Person implements Parcelable {
         this.setBreakfast(in.readBoolean());
         this.setVegetable(in.readBoolean());
         this.setSalt(in.readBoolean());
-        this.setEatCutsom(EatCustom.values()[in.readInt()]);
+        this.setEatCustom(EatCustom.values()[in.readInt()]);
     }
 
     public String getName() {
@@ -192,12 +190,12 @@ public class Person implements Parcelable {
         this.salt = salt;
     }
 
-    public EatCustom getEatCutsom() {
-        return eatCutsom;
+    public EatCustom getEatCustom() {
+        return eatCustom;
     }
 
-    public void setEatCutsom(EatCustom eatCutsom) {
-        this.eatCutsom = eatCutsom;
+    public void setEatCustom(EatCustom eatCustom) {
+        this.eatCustom = eatCustom;
     }
 
     /**
@@ -229,7 +227,7 @@ public class Person implements Parcelable {
         parcel.writeBoolean(breakfast);
         parcel.writeBoolean(vegetable);
         parcel.writeBoolean(salt);
-        parcel.writeInt(eatCutsom.ordinal());
+        parcel.writeInt(eatCustom.ordinal());
     }
 
     /**

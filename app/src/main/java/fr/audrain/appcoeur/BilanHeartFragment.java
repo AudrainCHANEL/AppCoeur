@@ -47,7 +47,6 @@ public class BilanHeartFragment extends Fragment {
         this.bmi = (TextView) getView().findViewById(R.id.textView20);
         this.family = (TextView) getView().findViewById(R.id.textView22);
 
-
         this.setValues();
     }
 
@@ -93,7 +92,10 @@ public class BilanHeartFragment extends Fragment {
         if (user.getAvc().equals(YesNoMaybe.YES)) {
             family.setText(getString(R.string.yes));
         }
-        else if (user.getAvc().equals(YesNoMaybe.DONTKNOW)) {
+        else if (user.getAvc().equals(YesNoMaybe.NO)) {
+            family.setText(getString(R.string.no));
+        }
+        else {
             family.setText(getString(R.string.i_dont_know));
         }
     }

@@ -47,7 +47,7 @@ public class MonAlimentation extends AppCompatActivity {
         this.user.setBreakfast(breakfast.isChecked());
         this.user.setVegetable(vegetable.isChecked());
         this.user.setSalt(salt.isChecked());
-        this.user.setEatCutsom(EatCustom.values()[eatCustom.getSelectedItemPosition()]);
+        this.user.setEatCustom(EatCustom.values()[eatCustom.getSelectedItemPosition()]);
 
         Intent intent = new Intent(this, Bilan.class);
         intent.putExtra("profil", user);
@@ -64,6 +64,6 @@ public class MonAlimentation extends AppCompatActivity {
         this.vegetable.setChecked(this.user.isVegetable());
         this.salt.setChecked(this.user.isSalt());
 
-        this.eatCustom.setSelection(this.user.getEatCutsom().ordinal());
+        this.eatCustom.setSelection(this.user.getEatCustom().ordinal());
     }
 }

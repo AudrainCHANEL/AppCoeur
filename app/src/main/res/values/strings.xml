@@ -36,4 +36,7 @@
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="i_dont_know">I don\'t know</string>
+    <string name="prepared">pre-prepared food</string>
+    <string name="cooked">self cooked meal</string>
+    <string name="can">canned food</string>
 </resources>
