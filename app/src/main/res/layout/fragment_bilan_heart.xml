@@ -26,7 +26,7 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/do_you_have_cholesterol" />
+            android:text="@string/are_you_diabetic" />
 
         <TextView
             android:id="@+id/textView17"
@@ -38,7 +38,7 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/are_you_diabetic" />
+            android:text="@string/do_you_have_cholesterol" />
 
         <TextView
             android:id="@+id/textView18"
@@ -59,15 +59,28 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/avc" />
+            android:text="@string/imc" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/avc" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
     </LinearLayout>
 </FrameLayout>

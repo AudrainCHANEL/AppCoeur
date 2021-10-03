@@ -2,6 +2,7 @@ package fr.audrain.appcoeur;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -16,14 +17,14 @@ import android.view.ViewGroup;
 public class BilanMonitoringFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
     private int mPage;
-    private Person user;
+    private AppCompatActivity activity;
 
-    public static BilanMonitoringFragment newInstance(int page, Person user) {
+    public static BilanMonitoringFragment newInstance(int page, AppCompatActivity activity) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
         BilanMonitoringFragment fragment = new BilanMonitoringFragment();
         fragment.setArguments(args);
-        fragment.user = user;
+        fragment.activity = activity;
         return fragment;
     }
 

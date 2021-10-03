@@ -26,18 +26,17 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        Person user = activity.getIntent().getParcelableExtra("profil");
         if (position==0)
         {
-            return BilanHeartFragment.newInstance(position + 1, user);
+            return BilanHeartFragment.newInstance(position + 1, activity);
         }
         else if (position==1)
         {
-            return BilanMonitoringFragment.newInstance(position + 1, user);
+            return BilanMonitoringFragment.newInstance(position + 1, activity);
         }
         else
         {
-            return BilanNutritionFragment.newInstance(position + 1, user);
+            return BilanNutritionFragment.newInstance(position + 1, activity);
         }
     }
 

@@ -2,13 +2,12 @@ package fr.audrain.appcoeur;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
-import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,14 +17,14 @@ import android.widget.TextView;
 public class BilanNutritionFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
     private int mPage;
-    private Person user;
+    private AppCompatActivity activity;
 
-    public static BilanNutritionFragment newInstance(int page, Person user) {
+    public static BilanNutritionFragment newInstance(int page, AppCompatActivity activity) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
         BilanNutritionFragment fragment = new BilanNutritionFragment();
         fragment.setArguments(args);
-        fragment.user = user;
+        fragment.activity = activity;
         return fragment;
     }
 
